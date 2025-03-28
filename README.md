@@ -53,7 +53,7 @@ Java communicates with MySQL tables using JDBC which stands for Java Database Co
 
 ## Login
 
-<img src="C:\Users\omkar\Downloads" width="400" height="300">
+<img src="EBS photos/loginpage.png" width="400" height="300">
 
 ## Main Page
 
