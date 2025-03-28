@@ -1,31 +1,76 @@
-1 - Create database with in mysql
+# Electricity Billing System
+This is a GUI made using Java Swing.
+It lets User perform multiple operations like:-
 
-create database ebs;
 
-2 - Select the database you just created
+1- User can Create his Personal login for security purposes.
 
-use ebs;
+2- User can Add customers and Calculate their Electricity Bill.
 
-3 - Create our first Table in the selected database with name login
+3- User can Pay Electricity Bills.
 
-create table login(meter_no varchar(20), username varchar(30), name varchar(30), password varchar(20), user varchar(20)); 
+4- User can Generate Bill.
 
-4 - Create the second table to store more information of user
+## About Project:
+This Java application was created using Intelli J .
+Additional library was added for the support of JDBC (Required to setup the connection between the Database and Java Application).
+It contains 9 different classes which works together to create a better user experience .
 
-create table customer(name varchar(20), meter_no varchar(20), address varchar(50), city varchar(30), state varchar(30), email varchar(40), phone varchar(20));
+->Splash Screen class
 
-5 - Create the third table to store the meter information of the user
+->Login Screen class
 
-create table meter_info(meter_no varchar(20), meter_location varchar(20), meter_type varchar(20), phase_code varchar(20), bill_type varchar(20), days varchar(20));
+->Main System class
 
-6 - Create the Tax table to store tax related information
+->Add Customer class
 
-create table tax(cost_per_unit varchar(20), meter_rent varchar(20), service_charge varchar(20), service_tax varchar(20), swacch_bharat_cess varchar(20), fixed_tax varchar(20));
+->Pay Bill class
 
-7 - Now inset values in the tax table
+->Generate Bill class
 
-insert into tax values('9','47','22','57','6','18');
+->Show Details class
 
-8 - Create Bill table to store electricity bill information of the user
+->Last Bill class
 
-create table bill(meter_no varchar(20), month varchar(30), units varchar(20), totalbill varchar(20), status varchar(20));
+->Connection Setup class(JDBC - MySQL)
+
+## Database (MySQL)
+Database for this Electricity Billing System contains 4 Tables
+
+
+->Login Table (UserName,Password)
+
+->Bill Table(MeterNumber,Units,Month,Amount)
+
+->Emp Table(Name, MeterNumber, Address, State, City, Email, Phone)
+
+->Tax Table(MeterLocation,MeterType,PhaseCode,BillType,Days,MeterRent,MCB_Rent,ServiceRent,GST)
+
+
+Java communicates with MySQL tables using JDBC which stands for Java Database Connectivity.
+
+## Screenshots:
+
+## Login
+
+<img src="https://github.com/Adarsh9616/Electricity_Billing_System/blob/master/ScreenShots/Login.JPG" width="400" height="300">
+
+## Main Page
+
+<img src="https://github.com/Adarsh9616/Electricity_Billing_System/blob/master/ScreenShots/Main.JPG" width="600" height="500">
+
+## Add Customer
+
+<img src="https://github.com/Adarsh9616/Electricity_Billing_System/blob/master/ScreenShots/AddC.JPG" width="500" height="500">
+
+## Calculate Bill
+
+<img src="https://github.com/Adarsh9616/Electricity_Billing_System/blob/master/ScreenShots/CalculateBill.JPG" width="500" height="500">
+
+## Details
+
+<img src="https://github.com/Adarsh9616/Electricity_Billing_System/blob/master/ScreenShots/Details.JPG" width="800" height="300">
+
+## Generate Bill
+
+<img src="https://github.com/Adarsh9616/Electricity_Billing_System/blob/master/ScreenShots/GenerateBill.JPG" width="400" height="700">
